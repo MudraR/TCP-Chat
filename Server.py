@@ -15,7 +15,7 @@ ports range from:
 1024-49151 -- Registered
 49152-65535 -- Dynamic
 """
-port = 55555 #Using an unused (by the general public) random port
+port = 50505 #Using dynamic random port -- unused by the public. 
 host = '127.0.0.1' #loopback address
 
 # Server Config
