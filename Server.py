@@ -8,6 +8,13 @@ import socket
 
 
 # server is host
+
+"""
+ports range from:
+0-1023 -- Well Known
+1024-49151 -- Registered
+49152-65535 -- Dynamic
+"""
 port = 55555 #Using an unused (by the general public) random port
 host = '127.0.0.1' #loopback address
 
