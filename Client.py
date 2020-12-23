@@ -1,19 +1,17 @@
 import socket
-import threading
+import threading #multiple clients will be able to connect
 
 # Choosing Username
 username = input("Choose your Username: ")
 
 # Connecting To Server
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('127.0.0.1', 55555))
+client.connect(('127.0.0.1', 50505)) #using the same server IP and Port defined in Server.py
 
 # Listening to Server and Sending Username
 def receive():
     while True:
         try:
-            # Receive Message From Server
-            # If 'USER' Send Username
             message = client.recv(1024).decode('ascii')
             if message == 'NICK':
                 client.send(username.encode('ascii'))
